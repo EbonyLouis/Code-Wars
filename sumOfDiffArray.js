@@ -10,9 +10,10 @@
 
 
 function sumOfDifferences(arr) {
-let reversedArray = arr.reverse()
-for(let i =0; i < reversedArray.length; i++){
-  let sum = reversedArray[i] - reversedArray[i+1] + reversedArray[i+1] - reversedArray[i+2]
-return sum
+let sum =0
+let reversedArray = arr.sort(function(a, b){return b-a});
+for(let i =0; i < reversedArray.length-1; i++){
+  sum += (reversedArray[i] - reversedArray[i+1])
 }
+return sum
 }
