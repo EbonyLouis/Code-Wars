@@ -30,4 +30,4 @@ function calcType(a, b, res) {
     break;
   }
   return type
-
+}
